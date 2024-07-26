@@ -6,7 +6,8 @@ describe('home page', () => {
 
   it('the h1 contains the correct text', () => {
     //I added .should("be.visible") so I can see this element on cypress
-    cy.get('[data-test="hero-heading"]').should("be.visible").contains("Testing Next.js Applications with Cypress")
+    // I created a custom command 
+    cy.getByData("hero-heading").should("be.visible").contains("Testing Next.js Applications with Cypress")
   })
 
   it("the features on the homepage are correct", ()=>{
@@ -16,3 +17,7 @@ describe('home page', () => {
 
   })
 })
+
+
+
+
